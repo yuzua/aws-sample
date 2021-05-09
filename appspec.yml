@@ -1,14 +1,14 @@
-version: 0.0 # 0.0固定
-os: linux # デプロイ先サーバーのOS
-files:   # アプリケーションの配置場所
+version: 0.0  # 0.0固定
+os: linux     # デプロイ先サーバーのOS
+files:        # アプリケーションの配置場所
   - source: /
-  destination: /home/ec2-user/php
-permissions:  # 配置ディレクトリのパーミション
+    destination: /home/ec2-user/php
+permissions:  # 配置ディレクトリのパーミッション
   - object: /home/ec2-user/php
     owner: ec2-user
     group: nginx
     pattern: "**"
-    mode: 775 # 実行・読み込み権限
+    mode: 775
     type:
       - file
       - directory
